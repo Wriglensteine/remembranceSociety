@@ -1,0 +1,3 @@
+move, move your player pawn along two currently open travel path or pay 1 dream to move anywhere
+delve, resolve challenges on the current planet and acquire one artifact if successful
+sow, place an ally timer on the current planet. After three turns choose a reward, 1 dream \n 1 free resolve \n 1 event card
