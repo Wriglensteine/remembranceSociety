@@ -10,7 +10,8 @@ jobs:
       - run: |
           git config --local user.email "wrijam@hotmail.co.uk"
           git config --local user.name "wriglensteine"
-          nandeck_and_outputs/nanDECK nandeck_and_outputs/nandeck_action_cards.txt /exec ; Start-Sleep -Seconds 5
+          nandeck_and_outputs/nanDECK nandeck_and_outputs/nandeck_action_cards.txt /exec
+          Start-Sleep -Seconds 5
           git commit -m "Add changes"
       - name: Push changes # push the output folder to your repo
         uses: ad-m/github-push-action@master
