@@ -1,16 +1,10 @@
-name: GitHub Actions Demo
+name: Run nanDECK
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+  RunsNanDECK:
+    runs-on: lts-7.2-nanoserver-1809
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: sudo apt install mono-runtime
-      - run: mono nandeck_and_outputs/nanDECK.exe nandeck_action_cards.txt /exec
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run:  nandeck_and_outputs/nanDECK nandeck_and_outputs/nandeck_action_cards.txt /exec
