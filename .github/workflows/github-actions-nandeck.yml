@@ -14,7 +14,8 @@ jobs:
           Start-Sleep -Seconds 25
           git commit -a -m "Add changes" --allow-empty
       - name: Push changes # push the output folder to your repo
-        uses: ad-m/github-push-action
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: true
+          branch: ${{ github.ref }}
