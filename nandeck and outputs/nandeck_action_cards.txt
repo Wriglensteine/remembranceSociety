@@ -1,4 +1,4 @@
-link=action_card_ideas.csv,title, body_text
+link=../text_files/action_card_ideas.csv,title, body_text
 ;setup
 dpi=300
 oversample=2
@@ -9,8 +9,8 @@ PAGE=21,29.7,PORTRAIT,HV,#FFFFFF
 [textColor2] = #95b3b7
 
 ;background image
-image=[all], card_goals_blank.png, 0, 0, 100%, 100%
-image=[allback], card_goals_blank_reverse.png, 0, 0, 100%, 100%
+image=[all], ../cards_goals_blank.png, 0, 0, 100%, 100%
+image=[allback], ../cards_goals_blank_reverse.png, 0, 0, 100%, 100%
 
 ;Title text
 [xtext]=10%
@@ -33,3 +33,6 @@ font= "arial", 16, TB, [textColor2]
 text = [allback], [title],[xtext],[ytext], [twidth], [theight]
 font= "arial", 16, TB, [textColor2]
 text = [allback], [body_text],[xbtext],[ybtext], [tbwidth], [tbheight]
+
+display=cards_actions_output_fronts.png,1,4
+display=cards_actions_output_backs.png,5,8
