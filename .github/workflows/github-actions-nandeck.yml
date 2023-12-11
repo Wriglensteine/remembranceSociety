@@ -13,7 +13,7 @@ jobs:
           nandeck_and_outputs/nanDECK nandeck_and_outputs/nandeck_action_cards.txt /exec
           Start-Sleep -Seconds 25
           git commit -a -m "Add changes" --allow-empty
-      - name: Push changes # push the output folder to your repo
+      - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
