@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   RunsNanDECK:
-    runs-on: lts-7.2-nanoserver-1809
+    runs-on: powershell:latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
