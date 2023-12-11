@@ -25,14 +25,14 @@ image=[allback], ../cards_goals_blank_reverse.png, 0, 0, 100%, 100%
 [tbheight] = 70%
 
 font= "arial", 16, TB, [textColor1]
-text = [all], [title],[xtext],[ytext], [twidth], [theight]
+text = [all], [title],[xtext],[ytext], [twidth], [theight],center,wwtop
 font= "arial", 16, TB, [textColor1]
-text = [all], [body_text],[xbtext],[ybtext], [tbwidth], [tbheight]
+text = [all], [body_text],[xbtext],[ybtext], [tbwidth], [tbheight],left,wwtop
 
 font= "arial", 16, TB, [textColor2]
-text = [allback], [title],[xtext],[ytext], [twidth], [theight]
+text = [allback], [title],[xtext],[ytext], [twidth], [theight],left,wwtop
 font= "arial", 16, TB, [textColor2]
-text = [allback], [body_text],[xbtext],[ybtext], [tbwidth], [tbheight]
+text = [allback], [body_text],[xbtext],[ybtext], [tbwidth], [tbheight],center,wwtop
 
 display=cards_actions_output_fronts.png,1,4
 display=cards_actions_output_backs.png,5,8
