@@ -1,5 +1,5 @@
 name: Run nanDECK
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} updating nanDECK outputs
 on: [push]
 jobs:
   RunsNanDECK:
@@ -9,6 +9,8 @@ jobs:
         uses: actions/checkout@v4
       - run: |
           nandeck_and_outputs/nanDECK nandeck_and_outputs/nandeck_action_cards.txt /exec
+          git config --local user.email "wriglensteine@gmail.com"
+          git config --local user.name "wriglensteine"
           git commit -m "Add changes"
       - name: Push changes # push the output folder to your repo
         uses: ad-m/github-push-action@master
