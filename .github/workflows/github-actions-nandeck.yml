@@ -10,8 +10,8 @@ jobs:
       - run: |
           git config --local user.email "wrijam@hotmail.co.uk"
           git config --local user.name "wriglensteine"
-          nandeck_and_outputs/nanDECK nandeck_and_outputs/nandeck_action_cards.txt /exec
-          Start-Sleep -Seconds 25
+          foreach ($File in Get-ChildItem nandeck_and_outputs) {nandeck_and_outputs/nanDECK nandeck_and_outputs/$File /exec}
+          Start-Sleep -Seconds 200
           git commit -a -m "Add changes" --allow-empty
       - name: Push changes
         uses: ad-m/github-push-action@master
