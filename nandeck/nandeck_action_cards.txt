@@ -34,5 +34,5 @@ text = [allback], [title],[xtext],[ytext], [twidth], [theight],center,wwtop
 font= "arial", 16, TB, [textColor2]
 text = [allback], [body_text],[xbtext],[ybtext], [tbwidth], [tbheight],left,wwtop
 
-display=cards_actions_output_fronts.png,1,4
-display=cards_actions_output_backs.png,5,8
+display=../nandeck_outputs/cards_actions_output_fronts.png,1,4
+display=../nandeck_outputs/cards_actions_output_backs.png,5,8
