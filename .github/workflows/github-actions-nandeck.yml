@@ -10,8 +10,8 @@ jobs:
       - run: |
           git config --local user.email "wrijam@hotmail.co.uk"
           git config --local user.name "wriglensteine"
-          foreach ($File in Get-ChildItem ./nandeck) {./nanDECK nandeck/$File /exec}
-          foreach ($File in Get-ChildItem ./nandeck) {echo $file.Basename}
+          foreach ($File in Get-ChildItem ./nandeck) {./nanDECK ./nandeck/$File /exec}
+          foreach ($File in Get-ChildItem ./nandeck) {echo $file}
           Start-Sleep -Seconds 40
           git commit -a -m "Add changes" --allow-empty
       - name: Push changes
