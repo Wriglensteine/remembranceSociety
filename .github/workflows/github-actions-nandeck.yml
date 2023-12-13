@@ -12,7 +12,7 @@ jobs:
           git config --local user.name "wriglensteine"
           foreach ($File in Get-ChildItem ./nandeck) {./nanDECK ./nandeck/$File /exec}
           foreach ($File in Get-ChildItem ./nandeck) {echo $file}
-          Start-Sleep -Seconds 40
+          Start-Sleep -Seconds 500
           git commit -a -m "Add changes" --allow-empty
       - name: Push changes
         uses: ad-m/github-push-action@master
