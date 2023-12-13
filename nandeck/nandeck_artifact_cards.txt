@@ -1,0 +1,41 @@
+link=../text_files/artifact_table.csv,title, body_text, orb1, orb2, orb3
+
+;setup
+dpi=300
+oversample=2
+[all]=1-20
+[allback]=21-40
+[orbScale] = 1.45
+PAGE=21,29.7,PORTRAIT,HV,#FFFFFF
+[textColor1] = #751f1f
+[textColor2] = #95b3b7
+
+macro=orb,(orbValue),(cardNum),(x),(y)
+    if = (orbValue) = "love"
+        image=(cardNum), ../orb_love.png, (x),(y),[orbScale],[orbScale]
+    elseif = (orbValue) = "melancholy"
+        image=(cardNum), ../orb_melancholy.png, (x),(y),[orbScale],[orbScale]
+    elseif = (orbValue) = "hope"
+        image=(cardNum), ../orb_hope.png, (x),(y),[orbScale],[orbScale]
+    endif
+end
+
+;background image
+image=[all], ../cards_artifact_blank.png, 0, 0, 100%, 100%
+image=[allback], ../cards_artifact_blank_reverse.png, 0, 0, 100%, 100%
+
+;Body text
+[xbtext]=15%
+[ybtext]=59%
+[tbwidth]=70%
+[tbheight] = 70%
+
+font= "arial", 13, TB, [textColor1]
+text = [all], [body_text],[xbtext],[ybtext], [tbwidth], [tbheight],left,wwtop
+
+orb=[orb1],[all],3%,10%
+orb=[orb2],[all],38%,2.8%
+orb=[orb3],[all],68%,10%
+
+display=../nandeck_outputs/cards_artifacts_output_fronts.png,1,4
+display=../nandeck_outputs/cards_artifacts_output_backs.png,5,8

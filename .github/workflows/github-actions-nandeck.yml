@@ -1,0 +1,23 @@
+name: Run nanDECK
+run-name: ${{ github.actor }} updating nanDECK outputs
+on: [push]
+jobs:
+  RunsNanDECK:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: |
+          git config --local user.email "wrijam@hotmail.co.uk"
+          git config --local user.name "wriglensteine"
+          ./nanDECK ./nandeck/nandeck_action_cards.txt /exec
+          Start-Sleep -Seconds 40
+          ./nanDECK ./nandeck/nandeck_artifact_cards.txt /exec
+          Start-Sleep -Seconds 40
+          git commit -a -m "Add changes" --allow-empty
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
+          branch: ${{ github.ref }}
